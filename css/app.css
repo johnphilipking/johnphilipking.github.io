@@ -1,8 +1,11 @@
-
 body.body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin-top: 2.2rem;
 }
 
 .header {
@@ -10,7 +13,7 @@ body.body {
   margin-bottom: 0;
 }
 
-.header h1.title {
+.header .title {
   text-align: center;
   font-size: 1.6rem;
   margin: 1rem auto 0;
@@ -18,7 +21,7 @@ body.body {
 }
 
 .header nav {
-    margin-top: .4rem;
+  margin-top: 0.4rem;
 }
 
 .header nav ul {
@@ -37,9 +40,55 @@ nav li {
 }
 
 .main {
-    margin-top: 0;
+  display: block;
+  position: relative;
+  margin-top: 0;
 }
 
 .footer {
-    margin-top: auto
+  margin-top: auto;
 }
+
+/* START RESUME PAGE */
+
+button.download-resume {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+}
+
+.job {
+  display: flex;
+  flex-direction: column;
+  border-bottom: var(--border-thickness) dotted var(--text-color);
+  padding-bottom: 0.4rem;
+}
+
+.job div {
+  margin: 0;
+}
+
+.job h2 {
+  margin: 0.6rem 0;
+  padding: 0;
+  font-size: 1.3em;
+}
+
+.job h3 {
+  margin: 0 0 0.6rem;
+}
+
+.job-company {
+  font-size: 1.2em;
+}
+.job-date {
+  font-size: 0.9em;
+}
+.job h4 {
+  margin: 0 0 0.3em;
+}
+.job-details li {
+  padding-bottom: 0.3em;
+}
+
+/* END RESUME PAGE */
