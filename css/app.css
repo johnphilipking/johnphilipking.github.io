@@ -20,6 +20,10 @@ h1 {
   text-transform: lowercase;
 }
 
+.header .title a {
+  text-decoration: none;
+}
+
 .header nav {
   margin-top: 0.4rem;
 }
@@ -47,6 +51,7 @@ nav li {
 
 .footer {
   margin-top: auto;
+  padding: 1.4rem 0;
 }
 
 /* START RESUME PAGE */
@@ -61,7 +66,8 @@ button.download-resume {
   display: flex;
   flex-direction: column;
   border-bottom: var(--border-thickness) dotted var(--text-color);
-  padding-bottom: 0.4rem;
+  padding-bottom: 1.4rem;
+  margin: 0;
 }
 
 .job div {
@@ -69,13 +75,12 @@ button.download-resume {
 }
 
 .job h2 {
-  margin: 0.6rem 0;
   padding: 0;
-  font-size: 1.3em;
 }
 
 .job h3 {
-  margin: 0 0 0.6rem;
+  padding: 0;
+  font-size: 1.3em;
 }
 
 .job-company {
@@ -89,6 +94,37 @@ button.download-resume {
 }
 .job-details li {
   padding-bottom: 0.3em;
+}
+
+.skills {
+  display: block;
+  position: relative;
+}
+
+.skills ul {
+  container-name: skills-list;
+  container-type: inline-size;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  font-size: 0.9em;
+  padding: 0.2em;
+}
+
+@container skills-list (width < 60ch) {
+  li {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@container skills-list (width > 60ch) {
+  li {
+    width: 33%;
+  }
 }
 
 /* END RESUME PAGE */
